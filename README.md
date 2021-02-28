@@ -19,7 +19,7 @@ One point to note is that there are some missing days. January and February 2017
 
 ## Average Time To Dispatch
 
-When someone calls 911, what is the average time it takes before someone it dispatched? Does it change based on the reason the 911 call was placed?
+When someone calls 911, what is the average time it takes before someone is dispatched? Does it change based on the reason the 911 call was placed?
 
 |HH:MM:SS|         Call Reason|
 |--------|--------------------|
