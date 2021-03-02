@@ -206,44 +206,45 @@ This may not come as a surprise but generally 25-30 y/o are most likely to be ar
 
 ![Age and arrests over time](https://github.com/Vinnie-Singleton/Brockton_911_Data_Analysis/blob/main/Pics/Age_Over_Time_Arrests.png)
 
-## Correlation Between Charges for Arrested Individuals
+## Frequency Counts of Charges for Arrested Individuals
 
-Is there some underlying relationship in why people are arrested? Do people who are arrested for Possession of a Schedule I substance also get charged with possession of an illegal fire arm? Short answer no, there are no interesting correlations unless you count the number of motorized scooters incidents. Many of the highly correlated events occur infrequently to the point where there isn't enough data to make any solid claims. Other correlations are unsurprising such as the relationship between unregistered motor vehicles and uninsured motor vehicles.
+Is there some underlying relationship for why people are arrested? Do people who are arrested for Possession of a Schedule I substance also get charged with possession of an illegal fire arm? The top 20 most frequent charge pairs are listed below and the details really aren't too shocking. We have pairs like uninsured and unregistered motor vehicle, no inspection sticker and unlicensed operation of a motor vehicle, A&B on a police officer and resisting arrest.
 
 
+|Charge 1| Charge 2| Number of Occurrences
+|--------|---------|----------------------
+DISORDERLY CONDUCT | DISTURBING THE PEACE | 564
+UNINSURED MOTOR VEHICLE | UNREGISTERED MOTOR VEHICLE | 350 
+DISTURBING THE PEACE | RESIST ARREST | 264 
+DISORDERLY CONDUCT | RESIST ARREST | 253 
+STOP/YIELD, FAIL TO / /CAUSING OR CREATING GRIDLOCK | UNLICENSED OPERATION OF MV | 240 
+DISTURBING THE PEACE | TRESPASS | 199 
+ATTACHING PLATES TO MV | UNREGISTERED MOTOR VEHICLE | 169 
+DISORDERLY CONDUCT | TRESPASS | 147 
+MARKED LANES VIOLATION | UNLICENSED OPERATION OF MV | 147 
+ATTACHING PLATES TO MV | UNINSURED MOTOR VEHICLE | 146 
+WARRANT, FOREIGN | WARRANT, LOCAL | 130 
+RECKLESS OPERATION OF MOTOR VEHICLE | STOP FOR POLICE, FAIL | 129 
+UNLICENSED OPERATION OF MV | UNREGISTERED MOTOR VEHICLE | 129 
+STOP FOR POLICE, FAIL | STOP/YIELD, FAIL TO / /CAUSING OR CREATING GRIDLOCK | 116 
+LICENSE SUSPENDED, OP MV WITH | STOP/YIELD, FAIL TO / /CAUSING OR CREATING GRIDLOCK | 115 
+WARRANT, DEFAULT | WARRANT, FOREIGN | 115 
+WARRANT, DEFAULT | WARRANT, LOCAL | 113 
+REGISTRATION SUSPENDED, OP MV WITH | UNINSURED MOTOR VEHICLE | 110 
+UNINSURED MOTOR VEHICLE | UNLICENSED OPERATION OF MV | 106 
+RESIST ARREST | TRESPASS | 101 
 
-|Charge 1| Charge 2| Correlation Strength| Number of Occurrences
-|--------|--------|---------------------|----------------------
-Motorized Scooters|  Operating Regulations| 1.0|9
-FIREARM, IN FELONY POSSESS, SUBSQ.OFF.| ABANDON MV| 1.0|1
-SNOW/REC, VEH OPERATING NEGLIGENTLY OR RECKLESSLY| SNOW/REC, VEH FAILURE TO STOP| 1.0|4
-INNKEEPER DEFRAUD OVER $100 CREDIT CARD| RECEIVE IMPROP UNDER $250| 1.0|1
-Concealing or Harboring Child|  Aiding/Abetting of Violation of Court Ord| 1.0|1
-Underage Alcohol Possession| Person under 21y will not be charged if seek| 1.0|2
-UTTER FALSE DOCUMENT| FORGERY OF DOCUMENT| 0.7376906433943208|7
-UTTER FALSE CHECK| FORGERY OF CHECK| 0.724010510599616|48
-KIDNAPPING, FIREARM-ARMED| ASSAULT IN DWELLING, FIREARM-ARMED| 0.7070819403519613|1
-HARASSMENT, CRIMINAL SUBSQ.OFF.| EXTORTION BY THREAT OF INJURY| 0.7070819403519498|1
-RIOT, INCITE| ESCAPE FROM DYS, ATTEMPT| 0.6671791376322912|7
-Destruction of Property|  Malicious (-$1,200)| 0.6641644726605328|19
-UNREGISTERED MOTOR VEHICLE| UNINSURED MOTOR VEHICLE| 0.6446915505397024|350
-DISTURBING THE PEACE| DISORDERLY CONDUCT| 0.6435051710444422|564
-CREDIT CARD, POSSESS COUNTERFEIT PRESS c266 §37C(j)| CREDIT CARD, FORGE OR UTTER FORGED| 0.6323221823049164|4
-B&E DAYTIME FOR FELONY, ARMED| PERSON IN FEAR, ASSAULT W/DANGEROUS WEAPON +60| 0.5998594419841516|3
-RAPE, AGGRAVATED| PROSTITUTION, MAINTAIN HOUSE OF| 0.5773097035641728|1
-PROSTITUTION, MAINTAIN HOUSE OF| PROSTITUTION, DERIVE SUPPORT FROM| 0.5773097035641451|1
-RAPE, AGGRAVATED| KIDNAPPING WITH SEXUAL ASSAULT, ARMED| 0.5773097035641098|1
-OBSCENE MATTER TO MINOR| CHILD PORNOGRAPHY POSSESS| 0.5773097035640748|1
-REPAIR/DEALER PLATE, MISUSE OF| NUMBER PLATE, MISUSE DEALER/REPAIR| 0.5773097035639322|1
-RMV SIGNATURE, POSSESS/USE FALSE/STOLEN| REPAIR/DEALER PLATE, MISUSE OF| 0.5773097035638587|1
-CREDIT CARD LARCENY OF c266 §37B(b)| CREDIT CARD FRAUD OVER $1200 c266 §37C(e)| 0.5773097035638451|1
-Destruction of Property|  Malicious (+$1,200)| 0.5492611478737156|13
-BURGLARY, ARMED| ASSAULT IN DWELLING, ARMED| 0.5162707679631164|2
-OBSCENE MATTER TO MINOR| Enticement of Child Under 16| 0.5162707679630976|2
-DRUG POSSESS CLASS D SUBSQ.OFF.| DRUG DISTRIBUTE CLASS D SUBSQ.OFF.| 0.4999473027805902|1
-CREDIT CARD, RECEIVE STOLEN| CREDIT CARD, IMPROPER USE OVER $250| 0.4999473027805822|1
-SNOW/REC, VEH OPERATING NEGLIGENTLY OR RECKLESSLY| SNOW VEH, ON PRIVATE PROPERTY| 0.4999473027805475|1
-SNOW/REC, VEH FAILURE TO STOP| SNOW VEH, ON PRIVATE PROPERTY| 0.4999473027805475|1
+Just dumping out the most common occurrences might not be the best way to go about this. We can instead select a specific charge like A&B on a police officer and see what the most frequent pairings are.
+
+Charge 1|Charge 2| Number of Occurrences
+--------|--------|----------------------
+A&B ON POLICE OFFICER | RESIST ARREST | 99
+A&B ON POLICE OFFICER | DISTURBING THE PEACE | 79
+A&B ON POLICE OFFICER | DISORDERLY CONDUCT | 77
+A&B ON POLICE OFFICER | Interfering with Police Officer in Performance of Duty | 20
+A&B ON POLICE OFFICER | TRESPASS | 20
+
+This gives us something a little more concrete where we can say we have examples of 79 incidents where someone was disturbing the peace and then also assaulted a police officer. In the event that police arrest a new person for disturbing the peace, this information could be useful simply by increasing awareness. This may be useful for other things as well like when a person has a weapon. If we examine firearm charges we can see that there is some frequency with which drug charges and firearm charges overlap. This information may be useful to know when searching a vehicle or person.
 
 ## Number of Arrests and Calls Over Time
 
